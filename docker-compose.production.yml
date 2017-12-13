@@ -3,9 +3,9 @@ services:
   httpd:
     container_name: tryecscli-httpd
     hostname: zuckscojp-httpd
-    build: ./services/httpd
+    image: 825814182855.dkr.ecr.ap-northeast-1.amazonaws.com/tryecscli-httpd
     ports:
-      - 8080:80
+      - 80:80
       - 443:443
     networks:
       - network-tryecscli
@@ -15,7 +15,7 @@ services:
   php:
     container_name: tryecscli-php
     hostname: tryecscli-php
-    build: ./services/php
+    image: 825814182855.dkr.ecr.ap-northeast-1.amazonaws.com/tryecscli-php
     expose:
       - 9000
     networks:
