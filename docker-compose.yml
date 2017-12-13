@@ -1,0 +1,27 @@
+version: '2'
+services:
+  httpd:
+    container_name: tryecscli-httpd
+    hostname: zuckscojp-httpd
+    build: ./services/httpd
+    ports:
+      - 8080:80
+      - 443:443
+    networks:
+      - network-tryecscli
+    volumes:
+      - .:/web/try-ecs-cli
+
+  php:
+    container_name: tryecscli-php
+    hostname: tryecscli-php
+    build: ./services/php
+    expose:
+      - 9000
+    networks:
+      - network-tryecscli
+    volumes:
+      - .:/web/try-ecs-cli
+
+networks:
+  network-tryecscli:
