@@ -3,7 +3,7 @@ services:
   httpd:
     container_name: tryecscli-httpd
     hostname: zuckscojp-httpd
-    build: ./services/httpd
+    build: ./docker/httpd
     ports:
       - 8080:80
       - 443:443
@@ -15,7 +15,7 @@ services:
   php:
     container_name: tryecscli-php
     hostname: tryecscli-php
-    build: ./services/php
+    build: ./docker/php
     expose:
       - 9000
     networks:
