@@ -2,7 +2,7 @@ version: '2'
 services:
   httpd:
     container_name: tryecscli-httpd
-    hostname: zuckscojp-httpd
+    hostname: tryecscli-httpd
     build: ./docker/httpd
     ports:
       - 8080:80
