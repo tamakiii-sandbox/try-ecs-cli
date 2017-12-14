@@ -1,8 +1,7 @@
 version: '2'
 services:
   httpd:
-    container_name: tryecscli-httpd
-    hostname: tryecscli-httpd
+    image: tryecscli/httpd
     build: ./docker/httpd
     ports:
       - 8080:80
@@ -13,8 +12,7 @@ services:
       - $PWD:/web/try-ecs-cli
 
   php:
-    container_name: tryecscli-php
-    hostname: tryecscli-php
+    image: tryecscli/php
     build: ./docker/php
     expose:
       - 9000
