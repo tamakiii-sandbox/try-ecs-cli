@@ -1,8 +1,8 @@
-FROM docker.io/amazonlinux:latest
+FROM centos:7
 
 RUN yum -y update && yum -y install \
-  httpd24 \
-  mod24_ssl \
+  httpd \
+  mod_ssl \
   which \
   vim \
   && yum clean all
